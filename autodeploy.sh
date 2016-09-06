@@ -1,16 +1,17 @@
 #!/bin/bash
 ##This script will make you feel at home again!
 
+DIR=$(dirname "$(readlink -f "$0")")
 
 ##BASH##
-ln -s ./bashrc ~/.bashrc
+ln -s $DIR/bashrc ~/.bashrc
 ##BASH##
 
 
 ##ZSH##
-ln -s ./zshrc ~/.zshrc
-ln -s ./zshrc.local ~/.zshrc.local
-ln -s ./zshrc.zni ~/.zshrc.zni
+ln -s $DIR/zshrc ~/.zshrc
+ln -s $DIR/zshrc.local ~/.zshrc.local
+ln -s $DIR/zshrc.zni ~/.zshrc.zni
 ##ZSH##
 
 
@@ -42,15 +43,15 @@ fi
 if [[ ! -d ~/.i3 ]]; then
     mkdir ~/.i3
 fi
-ln -s ./i3config ~/.i3/config
+ln -s $DIR/i3config ~/.i3/config
 ##I3##
 
 ##TMUX##
-ln -s ./tmux.conf ~/.tmux.conf
+ln -s $DIR/tmux.conf ~/.tmux.conf
 if [[ ! -d ~/.tmuxinator ]]; then
     mkdir ~/.tmuxinator
 fi
-ln -s ./tmuxdef.yml ~/.tmuxinator/def.yml
+ln -s $DIR/tmuxdef.yml ~/.tmuxinator/def.yml
 ##TMUX##
 
 
