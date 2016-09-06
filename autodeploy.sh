@@ -34,7 +34,6 @@ if [[ ! -d ~/.vim ]]; then
     git clone https://github.com/honza/vim-snippets.git ~/.vim/bundle/vim-snippets
     git clone https://github.com/scrooloose/syntastic.git ~/.vim/bundle/syntastic
     git clone https://github.com/mbbill/undotree.git ~/.vim/bundle/undotree
-    git clone https://github.com/vim-scripts/taglist.vim.git ~/.vim/bundle/taglist
 fi
 ##VIM##
 
