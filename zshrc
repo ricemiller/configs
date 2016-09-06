@@ -145,4 +145,4 @@ alias j=z
 alias telegram='nohup /home/case/Telegram/Telegram &'
 alias wildstar='WINEPREFIX=~/wildstar/ wine wildstar/drive_c/Program\ Files\ \(x86\)/NCSOFT/WildStar/Wildstar.exe &'
 alias ise='/home/case/Xilinx/14.7/ISE_DS/ISE/bin/lin64/ise &'
-export BROWSER="vivaldi-beta"
+export BROWSER="vivaldi-stable"

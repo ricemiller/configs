@@ -33,7 +33,7 @@ font pango: Monospace 8
 floating_modifier $mod
 
 # start a terminal
-bindsym $mod+Return exec --no-startup-id terminology -e "mux def"
+bindsym $mod+Return exec --no-startup-id terminology -e "tmuxinator def"
 
 # kill focused window
 bindsym $mod+q kill
