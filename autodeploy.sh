@@ -18,7 +18,7 @@ ln -s $DIR/zshrc.zni ~/.zshrc.zni
 
 
 ##VIM##
-ln -s ./vimrc ~/.vimrc
+ln -s $DIR/vimrc ~/.vimrc
 
 if [[ ! -d ~/.vim ]]; then
 
