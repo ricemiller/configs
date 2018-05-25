@@ -4,21 +4,21 @@
 DIR=$(dirname "$(readlink -f "$0")")
 
 ##BASH##
-ln -s $DIR/bashrc ~/.bashrc
+ln -sf $DIR/bashrc ~/.bashrc
 ##BASH##
 
 
 ##ZSH##
-ln -s $DIR/zshrc ~/.zshrc
-ln -s $DIR/zshrc.local ~/.zshrc.local
-ln -s $DIR/zshrc.zni ~/.zshrc.zni
+ln -sf $DIR/zshrc ~/.zshrc
+ln -sf $DIR/zshrc.local ~/.zshrc.local
+ln -sf $DIR/zshrc.zni ~/.zshrc.zni
 ##ZSH##
 
 
 
 
 ##VIM##
-ln -s $DIR/vimrc ~/.vimrc
+ln -sf $DIR/vimrc ~/.vimrc
 
 if [[ ! -d ~/.vim ]]; then
 
@@ -42,15 +42,15 @@ fi
 if [[ ! -d ~/.i3 ]]; then
     mkdir ~/.i3
 fi
-ln -s $DIR/i3config ~/.i3/config
+ln -sf $DIR/i3config ~/.i3/config
 ##I3##
 
 ##TMUX##
-ln -s $DIR/tmux.conf ~/.tmux.conf
+ln -sf $DIR/tmux.conf ~/.tmux.conf
 if [[ ! -d ~/.tmuxinator ]]; then
     mkdir ~/.tmuxinator
 fi
-ln -s $DIR/tmuxdef.yml ~/.tmuxinator/def.yml
+ln -sf $DIR/tmuxdef.yml ~/.tmuxinator/def.yml
 ##TMUX##
 
 

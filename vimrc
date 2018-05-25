@@ -22,8 +22,7 @@ set incsearch       "Búsquedas incrementales
 set hlsearch        "Resaltado de los resultados de búsquedas
 set showmatch       "Resalta paréntesis o llaves complementarios"
 
-color industry      "Esquema de colores oscuro
-"color zazen 
+color delek      "Esquema de colores oscuro
 
 "Formato de la línea de estado
 set statusline=%F%m%r%h%w\ [ASCII=\%03.3b]\ [0x\%02.2B]\ [POS=%04l,%04v][%p%%]\ [LEN=%L] 

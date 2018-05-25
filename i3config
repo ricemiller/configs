@@ -8,7 +8,8 @@
 # i3 config file (v4)
 #
 # Please see http://i3wm.org/docs/userguide.html for a complete reference!
-exec setxkbmap es -option "ctrl:nocaps" &
+exec_always --no-startup-id "killall -q compton; compton --config ~/.i3/compton.conf -b"
+exec setxkbmap gb -option "ctrl:nocaps" &
 #exec devmon &
 
 set $mod Mod1
@@ -34,13 +35,15 @@ floating_modifier $mod
 
 # start a terminal
 #bindsym $mod+Return exec --no-startup-id xterm -e "tmuxinator def"
-bindsym $mod+Return exec lxterminal -e tmuxinator def
+#bindsym $mod+Return exec lxterminal
+bindsym $mod+Return exec urxvt
 
 # kill focused window
 bindsym $mod+q kill
 
 # start dmenu (a program launcher)
-bindsym $mod+d exec j4-dmenu-desktop
+#bindsym $mod+d exec j4-dmenu-desktop
+bindsym $mod+d exec i3-dmenu-desktop
 
 # There also is the (new) i3-dmenu-desktop which only displays applications
 # shipping a .desktop file. It is a wrapper around dmenu, so you need that
@@ -172,7 +175,8 @@ bar {
                     inactive_workspace #333333 #222222 #888888
                     urgent_workspace   #CC3C02 #F26025 #ffffff
                 }
-        status_command i3status
+#status_command i3status
+        status_command i3blocks
         position top
 }
 
@@ -188,10 +192,18 @@ bindsym XF86AudioLowerVolume exec --no-startup-id amixer -q set Master 5%-
 bindsym XF86AudioMute exec --no-startup-id amixer -q set Master toggle
 bindsym XF86MonBrightnessUp exec xbacklight -inc 10
 bindsym XF86MonBrightnessDown exec xbacklight -dec 10
-bindsym XF86TouchpadToggle exec /home/case/scripts/touchpad.sh
+#bindsym XF86TouchpadToggle exec /home/case/scripts/touchpad.sh
 
 #quickswitch
-bindsym $mod+F12 exec quickswitch.py
+#bindsym $mod+F12 exec quickswitch.py
+
+#gaps
+for_window [class="^.*"] border pixel 3
+gaps inner 10
+gaps outer 5
+smart_gaps on
+smart_borders on
+hide_edge_borders both
 
 
 #wallpaper
